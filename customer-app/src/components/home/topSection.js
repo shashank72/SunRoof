@@ -8,12 +8,14 @@ import {
 } from "@mui/material";
 import React from "react";
 import NearMeIcon from "@mui/icons-material/NearMe";
+import { useNavigate } from "react-router-dom";
 
 function TopSection() {
+  const navigate = useNavigate();
   return (
     <div className="top-section">
       <img src="./images/learning-for-damage-detection-header.jpg" />
-      <div class="section__mask"></div>
+      <div className="section__mask"></div>
       <Stack display="flex" alignItems="center" sx={{ position: "relative" }}>
         <Typography
           variant="h1"
@@ -55,11 +57,12 @@ function TopSection() {
               fullWidth
               className="text-uppercase"
               sx={{ paddingY: "10px" }}
+              onClick={() => navigate("/order")}
             >
               Search Address
             </Button>
           </Box>
-          <Box>
+          {/* <Box>
             <Button
               variant="contained"
               color="primary"
@@ -69,7 +72,7 @@ function TopSection() {
             >
               Upload BluePrint
             </Button>
-          </Box>
+          </Box> */}
         </Stack>
       </Stack>
     </div>

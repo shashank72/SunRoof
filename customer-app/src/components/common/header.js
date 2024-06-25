@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
-    <header class="header">
+    <header className="header">
       <Stack
         direction="row"
         sx={{ height: "100%", paddingX: "30px" }}
